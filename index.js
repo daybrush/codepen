@@ -1,6 +1,8 @@
 function requestUrl(url, callback) {
   const req = new XMLHttpRequest();
-  req.addEventListener("load", () => req.responseText);
+  req.addEventListener("load", () => {
+    callback(req.responseText);
+  });
   req.open("GET", url);
   req.send();
 }
@@ -12,7 +14,7 @@ function $(selector, parent) {
 }
 requestUrl(location.href, res => {
   const html = document.createElement("html");
-  html.innerHTML = text;
+  html.innerHTML = res;
   
   const cssFiles = $("link[href]", html);
   const scriptFiles = $(`script[src]:not([src*="codepen"])`, html);
