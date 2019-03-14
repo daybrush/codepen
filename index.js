@@ -19,7 +19,7 @@ requestUrl(location.href, res => {
   const cssFiles = $("link[href]", html);
   const scriptFiles = $(`script[src]:not([src*="codepen"])`, html);
   const inlineScripts = $("script:not([src])", html);
-  const inlineStyles = html.querySelectorAll("style");
+  const inlineStyles = $("style", html);
   
   const titleEl = $("title", document);
   const body = $("body", html);
