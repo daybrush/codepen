@@ -24,8 +24,7 @@ requestUrl(location.href, res => {
   const titleEl = $("title", document);
   const body = $("body", html);
   const title = titleEl && titleEl.innerText || "";
-  
-  const htmlText = body[0].innerHTML.trim();
+ 
   const cssText = inlineStyles.map(el => el.innerText).join("\n").trim();
   const jsText = inlineScripts.map(el => el.innerText).join("\n").trim();
 
@@ -37,6 +36,7 @@ requestUrl(location.href, res => {
   inlineScripts.forEach(el => el.remove());
   inlineStyles.forEach(el => el.remove());
 
+  const htmlText = body[0].innerHTML.trim();
   const data = {
     title: title,
     description: title,
