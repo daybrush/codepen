@@ -30,7 +30,13 @@ requestUrl(location.href, res => {
   const jsText = inlineScripts.map(el => el.innerText).join("\n").trim();
 
   const scriptPaths = scriptFiles.map(el => el.getAttribute("src"));
-  const cssPaths = scriptFiles.map(el => el.getAttribute("href"));
+  const cssPaths = cssFiles.map(el => el.getAttribute("href"));
+  
+  scriptPaths.forEach(el => el.remove());
+  cssPaths.forEach(el => el.remove());
+  inlineScripts.forEach(el => el.remove());
+  inlineStyles.forEach(el => el.remove());
+
   const data = {
     title: title,
     description: title,
