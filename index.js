@@ -46,12 +46,10 @@ requestUrl(location.href, res => {
     css_external: cssPaths.join(";"),
     js_external: scriptPaths.join(";"),
   };
+
+  document.body.insertAdjacentHTML("afterbegin", `
+  <form class="codepenform" action="https://codepen.io/pen/define" method="POST" target="_blank">
+    <input type="hidden" name="data" value="${JSON.stringify(data).replace(/"/g, "&quot;").replace(/'/g, "&apos;")}">
+    <input type="submit" width="40" height="40" value="Codepen" class="submit-codepen" style="position:absolute;z-index:10;top:10px;right:10px;">
+  </form>`);
 });
-
-
-document.body.insertAdjacentHTML("afterbegin", `
-<form class="codepenform" action="https://codepen.io/pen/define" method="POST" target="_blank">
-  <input type="hidden" name="data" value="${JSON.stringify(data).replace(/"/g, "&quot;").replace(/'/g, "&apos;")}">
-  <input type="submit" width="40" height="40" value="Codepen" class="submit-codepen" style="position:absolute;z-index:10;top:10px;right:10px;">
-</form>
-`);
