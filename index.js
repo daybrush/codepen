@@ -32,8 +32,8 @@ requestUrl(location.href, res => {
   const scriptPaths = scriptFiles.map(el => el.getAttribute("src"));
   const cssPaths = cssFiles.map(el => el.getAttribute("href"));
   
-  scriptPaths.forEach(el => el.remove());
-  cssPaths.forEach(el => el.remove());
+  scriptFiles.forEach(el => el.remove());
+  cssFiles.forEach(el => el.remove());
   inlineScripts.forEach(el => el.remove());
   inlineStyles.forEach(el => el.remove());
 
