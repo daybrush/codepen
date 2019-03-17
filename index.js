@@ -28,7 +28,7 @@ requestUrl(location.href, res => {
   const cssText = inlineStyles.map(el => el.innerText).join("\n").trim();
   const jsText = inlineScripts.map(el => el.innerText).join("\n").trim();
 
-  const scriptPaths = scriptFiles.map(el => el.getAttribute("src"));
+  const scriptPaths = scriptFiles.map(el => el.getAttribute("src")).concat("https://daybrush.com/codepn/restore.js")
   const cssPaths = cssFiles.map(el => el.getAttribute("href"));
   
   $("script, link, style", html).forEach(el => el.remove());
