@@ -24,7 +24,7 @@ function requestUrl(url, callback) {
     const cssFiles = $("link[href]", html);
     const scriptFiles = $(`script[src]:not([src*="codepen"])`, html);
     const cssText = inlineStyles.map(el => el.outerHTML).join("\n").trim();
-    const jsText = inlineScripts.map(el => el.outerHTML).join("\n").trim();
+    const jsText = inlineScripts.map(el => el.outerHTML.replace("//# sourceURL=pen.js", "")).join("\n").trim();
   
     const scriptPaths = scriptFiles.map(el => el.outerHTML);
     const cssPaths = cssFiles.map(el => el.outerHTML);
