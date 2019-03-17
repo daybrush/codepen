@@ -55,17 +55,18 @@ ${jsText}
     const textarea = document.createElement("textarea");
 
     textarea.addEventListener("focus", e => {
-
+        textarea.select();
+    });
+    textarea.addEventListener("focus", e => {
+        document.execCommand('copy');
     });
     button.addEventListener("click", e => {
         if (navigator.clipboard) {
             navigator.clipboard.writeText(restoreText);
         } else {
             textarea.value = restoreText;
-
-            textarea.focus();
-            textarea.select();
-            document.execCommand('copy');
+            
+            textarea.focus();            
         }
     });
 
