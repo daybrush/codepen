@@ -81,6 +81,7 @@ ${jsText}
 
       textarea.focus();
       document.execCommand('copy');
+      alert("copied textarea");
     }
     button.addEventListener("click", e => {
       if (navigator.clipboard && navigator.clipbaord.writeText) {
