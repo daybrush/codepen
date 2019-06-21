@@ -25,8 +25,9 @@
   var a = document.createElement("a");
   a.setAttribute("href", "https://github.com/daybrush/scenejs");
   a.setAttribute("target", "_blank");
-  a.style.cssText = "position: fixed; bottom: 10px;right: 10px;width: 60px;height: 60px;line-height: 46px;border-radius: 50%;  border: 2px solid #555; background-color: #fff; overflow: hidden; padding: 3px;box-sizing: border-box";
-  a.innerHTML = '<img src="https://daybrush.com/scenejs/images/clapperboard.png" style="width: 100%;margin-top: 2px"/>';
+  a.style.cssText = "position: fixed; bottom: 10px;right: 10px;width: 50px;height: 50px;line-height: 46px;border-radius: 50%;  border: 2px solid #555; background-color: #fff; overflow: hidden; padding: 0px;box-sizing: border-box;text-align: center; text-decoration: none; color: black; font-weight: bold; font-family: sans-serif;font-size: 20px;";
+    a.innerHTML = '<img src="https://daybrush.com/scenejs/images/clapperboard.png" style="width: 90%;margin-top: 4px"/>';
+  // a.innerHTML = '?';
 
   a.addEventListener("click", function () {
     ga("event", '&ec=scene&ea=click&ev=' + Math.floor(Date.now() - startTime));
