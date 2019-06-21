@@ -25,7 +25,7 @@
   var a = document.createElement("a");
   a.setAttribute("href", "https://github.com/daybrush/scenejs");
   a.setAttribute("target", "_blank");
-  a.style.cssText = "position: fixed; bottom: 10px;right: 10px;width: 60px;height: 60px;line-height: 46px;border-radius: 50%; border: 2px solid #555;background #fff; overflow: hidden; padding: 3px;box-sizing: border-box";
+  a.style.cssText = "position: fixed; bottom: 10px;right: 10px;width: 60px;height: 60px;line-height: 46px;border-radius: 50%;  border: 2px solid #555; background-color: #fff; overflow: hidden; padding: 3px;box-sizing: border-box";
   a.innerHTML = '<img src="https://daybrush.com/scenejs/images/clapperboard.png" style="width: 100%;margin-top: 2px"/>';
 
   a.addEventListener("click", function () {
