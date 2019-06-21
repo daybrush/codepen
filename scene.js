@@ -9,13 +9,14 @@
   var screen = window.screen || { width: innerWidth, height: innerHeight };
   var collectInfos = [
     "v=1",
-    "t=event",
+    "t=pageview",
     "dl=" + location.href,
     "ul=" + (navigator.language || "en-us").toLowerCase(),
     "de=" + (document.charset || document.inputEncoding || document.characterSet || "utf-8"),
-    "dt=" + document.title, "sr=$" + screen.width + "x" + screen.height,
-    "vp=" + innerWidth + "x" + innerHeight, "ec=" + category, "ea=" + action,
-    "tid=" + tid
+    "dt=" + document.title, "sr=" + screen.width + "x" + screen.height,
+    "vp=" + innerWidth + "x" + innerHeight,
+    "cid=" + cid,
+    "tid=" + tid,
     "z=" + Math.floor(Math.random() * 10000000)
   ];
   const req = new XMLHttpRequest();
