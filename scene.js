@@ -30,7 +30,7 @@
   // a.innerHTML = '?';
 
   a.addEventListener("click", function () {
-    ga("event", '&ec=scene&ea=click&ev=' + Math.floor(Date.now() - startTime));
+    ga("event", '&ec=scene&ea=click&el=' + (document.title || "")  + '&ev=' + Math.floor(Date.now() - startTime));
   });
   document.body.appendChild(a);
 
