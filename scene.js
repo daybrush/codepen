@@ -1,6 +1,6 @@
 (function() {
   try {
-    if (!location.href.indexOf("fullcpgrid") > -1) {
+    if (!(location.href.indexOf("fullcpgrid") > -1)) {
       return;
     }
     const startTime = Date.now();
